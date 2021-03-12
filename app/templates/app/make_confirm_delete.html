@@ -11,7 +11,7 @@
     <p>Are you sure you want to delete the make: {{ make }}? </p>
     <form action="" method="POST">
         {% csrf_token %}
-        <input type="submit" value="Yes, delete">
+        <input type="submit" value="Yes, delete."> <br>
         <a href="{% url 'app:all' %}">Go back </a>
     </form>
 </body>
