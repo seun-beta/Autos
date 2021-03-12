@@ -1,114 +1,62 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
-</p>
+# ToDo List  
 
-<h3 align="center">Project Title</h3>
+Autos is a __CRUD__ Fullstack Web App that has a list of cars and their various manufacturers .
 
-<div align="center">
+## Tech
 
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+Autos is written in Python3 and Django3.  
+  
+## Installation  
+  
+### Windows 10 Users
 
-</div>
+Please install and set up the following packages first. Ugrade if you find the package already installed:  
+*Download [Python3](https://www.python.org/downloads/). It is advisable to install the package as an administrator. Click on the 'Add path' checkbox before moving on to the next step of the installation process. Run this command in your terminal to see the version you have installed.
 
----
+  ```sh
+  python -V
+  ```  
 
-<p align="center"> Few lines describing your project.
-    <br> 
-</p>
+* Download [pip](https://pip.pypa.io/en/latest/installing) and follow the instructions in the link as an installation guide.  
+* [SQLite3](https://sqlitebrowser.org/) (Ensure it is installed).
+* It is advisable to use Autos in a virtual environment. The README uses [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html#basic-installation) to create this virtual environment. You could use any virtualenv package of your choice but for Windows, install this wrapper with:
 
-## 📝 Table of Contents
+  ```sh
+  py -m pip install virtualenvwrapper-win 
+  ```
+  
+* Create a new virtual environment:
 
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+  ```sh
+  mkvirtualenv <envname>
+  ```
 
-## 🧐 About <a name = "about"></a>
+* Change your directory to the directory of the virtual environment
 
-Write about 1-2 paragraphs describing the purpose of your project.
+* Activate the virtual environment with:
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+  ```sh
+  <envname>\Scripts\activate
+  ```
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+* Install requirements in the virtual environment created:
 
-### Prerequisites
+  ```sh
+  py -m pip install django 
+  ```
 
-What things you need to install the software and how to install them.
+  ```sh
+  pip install -r requirements.txt
+  ```
 
-```
-Give examples
-```
+* Run server to ensure everything is running properly.
 
-### Installing
+  ```sh
+  python manage.py runserver
+  ```
 
-A step by step series of examples that tell you how to get a development env running.
+* Deactivate the virtual environment with:
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## 🎈 Usage <a name="usage"></a>
-
-Add notes about how to use the system.
-
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
-
-## ⛏️ Built Using <a name = "built_using"></a>
-
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
-
-## ✍️ Authors <a name = "authors"></a>
-
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+  ```sh
+  deactivate
+  ```
