@@ -1,19 +1,17 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.shortcuts import render
 from django.views import View
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from django.shortcuts import get_object_or_404
 
 from app.models import Auto, Make
-from app.forms import MakeForm
+
 
 class MainView(LoginRequiredMixin, View):
     def get(self, request):
-        mc = Make.objects.all().count()
+        mc = Make.objects.all().count
         al = Auto.objects.all()
-        ctx = { 'make_count' : mc, 'auto_list' : al }
+        ctx = {'make_count': mc, 'auto_list': al}
 
         return render(request, 'app/auto_list.html', ctx)
 
@@ -21,7 +19,7 @@ class MainView(LoginRequiredMixin, View):
 class MakeView(LoginRequiredMixin, View):
     def get(self, request):
         ml = Make.objects.all()
-        ctx = { 'make_list' : ml }
+        ctx = {'make_list': ml}
         return render(request, 'app/make_list.html', ctx)
 
 
@@ -59,4 +57,3 @@ class AutoDelete(LoginRequiredMixin, DeleteView):
     model = Auto
     fields = '__all__'
     success_url = reverse_lazy('app:all')
-
