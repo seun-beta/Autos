@@ -8,16 +8,16 @@
 </head>
 <body>
     <h1>Auto List</h1>
+    <table border="2">
     {% if auto_list %}
-    <ul>
-        <table border="2">
-            <th>
-                <td>Model</td>
-                <td>Manufacturer</td>
-                <td>Mileage</td>
-                <td>Comments</td>
-                <td>Option</td>
-            </th>
+        
+        <tr>
+            <th>Model</th>
+            <th>Manufacturer</th>
+            <th>Mileage</th>
+            <th>Comments</th>
+            <th>Option</th>
+        </tr>
         
         {% for auto in auto_list %}
             <tr>
@@ -28,12 +28,10 @@
             <td>
                 <a href="{% url 'app:auto_update' auto.id %}">Update</a> ¦
                 <a href="{% url 'app:auto_delete' auto.id %}">Delete</a>
-            </td>
-                
+            </td>   
         {% endfor %}
             </tr> 
     </table>
-    </ul>
     {% else %}
         <p>
             There are no autos in the library
@@ -47,9 +45,10 @@
             {% endif %}
         </p>
         <p>
-            <a href="{% url 'app:make_list' %}">View Makes</a> ({{ make_count }}) ¦
+            <a href="{% url 'app:make_list' %}">View makes</a> ({{ make_count }}) ¦
             <a href="{% url 'app:make_create' %}">Add a make</a>
         </p>
-        <a href="{% url 'logout' %}">Logout</a>
+        <a href="{% url 'logout' %}?next={% url 'home:home' %}">Logout</a>
+        
 </body>
 </html>
