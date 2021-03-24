@@ -22,7 +22,7 @@ Please install and set up the following packages first. Ugrade if you find the p
 * It is advisable to run Django in a virtual environment. The README uses [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html#basic-installation) to create this virtual environment. You could use any virtualenv package of your choice but for Windows, install this wrapper with:
 
   ```sh
-  py -m pip install virtualenvwrapper-win 
+  pip install virtualenvwrapper-win 
   ```
   
 * Create a new virtual environment:
